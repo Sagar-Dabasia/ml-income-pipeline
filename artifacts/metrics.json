@@ -1,0 +1,46 @@
+{
+  "dataset_source": "OpenML: adult (Census Income)",
+  "dataset_snapshot": "D:\\Projects\\ml-income-pipeline\\data\\raw\\adult.csv",
+  "best_model": "random_forest",
+  "metrics": {
+    "logreg": {
+      "accuracy": 0.8523902139420616,
+      "precision": 0.7413793103448276,
+      "recall": 0.5885372112917023,
+      "f1": 0.6561754887935145,
+      "roc_auc": 0.9042148127759706,
+      "confusion_matrix": [
+        [
+          6951,
+          480
+        ],
+        [
+          962,
+          1376
+        ]
+      ]
+    },
+    "random_forest": {
+      "accuracy": 0.8557682464940116,
+      "precision": 0.7332998493219488,
+      "recall": 0.6244653550042771,
+      "f1": 0.6745206745206745,
+      "roc_auc": 0.905534970775906,
+      "confusion_matrix": [
+        [
+          6900,
+          531
+        ],
+        [
+          878,
+          1460
+        ]
+      ]
+    }
+  },
+  "notes": [
+    "Replaced '?' with NaN and applied imputation.",
+    "Used ColumnTransformer for numeric/categorical preprocessing.",
+    "Selected best model by ROC-AUC on held-out test set."
+  ]
+}

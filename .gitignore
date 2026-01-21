@@ -1,0 +1,14 @@
+# venv
+.venv/
+
+# python
+__pycache__/
+*.pyc
+
+# ignore only the saved model
+artifacts/best_model.joblib
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
