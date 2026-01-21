@@ -27,37 +27,34 @@ metrics.json
 roc_curve.png
 
 ## Setup (Windows / PowerShell)
-```powershell
+
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 
-Train + Evaluate
-
+## Train + Evaluate
 python src/train.py
 
 
-This:
+## This:
 
-downloads the dataset from OpenML
-cleans missing values (? -> NaN)
-preprocesses numeric + categorical features
-trains two models:
-Logistic Regression (baseline)
-Random Forest (nonlinear)
-selects best by ROC-AUC
+- downloads the dataset from OpenML
+- cleans missing values (? -> NaN)
+- preprocesses numeric + categorical features
+- trains two models:
+- Logistic Regression (baseline)
+- Random Forest (nonlinear)
+- selects best by ROC-AUC
 
-writes:
+## Writes:
 artifacts/metrics.json
 artifacts/roc_curve.png
 artifacts/best_model.joblib (ignored in git)
 
-Inference
-
+## Inference
 python src/predict.py
 
-
-Results (example run)
+## Results
 Best model: Random Forest
 ROC-AUC: 0.9055
 Accuracy: 0.8558
