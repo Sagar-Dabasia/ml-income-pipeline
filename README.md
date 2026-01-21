@@ -17,19 +17,29 @@ A reproducible tabular ML pipeline that predicts whether income is `>50K` using 
 
 ## Project structure
 ml-income-pipeline/
+
 data/raw/adult.csv
+
 src/
+
 train.py
+
 predict.py
+
 utils.py
+
 artifacts/
+
 metrics.json
+
 roc_curve.png
 
 ## Setup (Windows / PowerShell)
 
 python -m venv .venv
+
 .venv\Scripts\Activate.ps1
+
 pip install -r requirements.txt
 
 ## Train + Evaluate
@@ -48,7 +58,9 @@ python src/train.py
 
 ## Writes:
 artifacts/metrics.json
+
 artifacts/roc_curve.png
+
 artifacts/best_model.joblib (ignored in git)
 
 ## Inference
@@ -56,9 +68,15 @@ python src/predict.py
 
 ## Results
 Best model: Random Forest
+
 ROC-AUC: 0.9055
+
 Accuracy: 0.8558
+
 F1 (positive class): 0.6745
+
 Confusion matrix:
+
 TN=6900, FP=531
+
 FN=878, TP=1460
